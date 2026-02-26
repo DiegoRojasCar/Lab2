@@ -7,12 +7,13 @@ Implementando una Lista
 ---
 **Antes de comenzar**
 
-* Importe el repositorio usando Visual Studio Code (revise [este tutorial](https://chartreuse-goal-d5c.notion.site/C-mo-comenzar-con-los-labs-b4dd8c7abc5a425d8f25e2eaa060e5b5?pvs=4))
-* Sólo puede modificar el archivo `list.c` y `main.c`
-* Para testear sus códigos debe abrir un terminal **Git Bash** y ejecutar el comando `./test.sh`
-* Verifique que sus cambios se hayan subido a su repositorio GitHub (actualice esta página)
-* **No está permitido usar comandos de git** (a menos que el profesor o ayudantes lo indiquen)
+* Cree un repositorio GitHub a partir de este template y luego impórtelo a su cuenta de (repl.it)[https://replit.com] (si no sabe o no se acuerda, revise [este tutorial](https://www.notion.so/Instrucciones-para-realizar-los-Labs-301d965dc59e8034b554e1e6a9772615?source=copy_link))
+* Sólo puede modificar los archivos `list.c` y `main.c`
+* Para testear sus códigos debe abrir un terminal (Shell) y ejecutar el comando `bash test.sh` en repl.it
+* Cuando termine el lab, verifique que sus cambios se hayan subido a su repositorio GitHub
 ---
+
+
 
 En este laboratorio implementaremos una **lista**. Para ello usaremos la siguiente estructura (lista enlazada doble):
 
