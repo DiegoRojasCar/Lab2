@@ -48,6 +48,12 @@ No está permitido:
 * Solicitar generación, corrección o reescritura del código del laboratorio.
 * **Copiar o utilizar código generado por IA**.
 
+Si utiliza herramientas de IA durante el laboratorio, debe:
+
+* Mantener la conversación completa en un único chat.
+* Adjuntar el enlace o la transcripción completa de dicha conversación junto con la entrega a través del aula virtual.
+* El estudiante es responsable de poder explicar y defender el código entregado.
+
 **Ejemplo de uso permitido (caso límite):**
 
 Un estudiante puede compartir un fragmento de su propio código junto con el mensaje de error y preguntar:
