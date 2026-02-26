@@ -165,7 +165,7 @@ int test_first_next(){
     }
     ok_msg("nextList");
 
-    return 15;
+    return 10;
 }
 
 int test_last_prev(){
@@ -439,7 +439,7 @@ int test_popcurrent(){
 
 
     ok_msg("popCurrent");
-    return 15;
+    return 10;
 
     //initialize_exList();
 
@@ -452,15 +452,15 @@ int main( int argc, char *argv[] ) {
 
     int total_score=0;
     total_score+=test_suite(test_create, "Test Create...", 10, 0, test_id);
-    total_score+=test_suite(test_first_next, "Test First y Next...", 15, 1, test_id);
+    total_score+=test_suite(test_first_next, "Test First y Next...", 10, 1, test_id);
     total_score+=test_suite(test_last_prev, "Test Last y Prev...", 10, 2, test_id);
     total_score+=test_suite(test_pushfront, "Test pushFront...", 10, 3, test_id);
     total_score+=test_suite(test_pushcurrent, "Test pushCurrent...", 10, 4, test_id);
-    total_score+=test_suite(test_popcurrent, "Test popCurrent...", 15, 5, test_id);
+    total_score+=test_suite(test_popcurrent, "Test popCurrent...", 10, 5, test_id);
     
     
     if(argc==1)
-      printf("\ntotal_score: %d/70\n", total_score);
+      printf("\ntotal_score: %d/60\n", total_score);
 
     
 
