@@ -52,7 +52,6 @@ Si utiliza herramientas de IA durante el laboratorio, debe:
 
 * Mantener la conversación completa en un único chat.
 * Adjuntar el enlace o la transcripción completa de dicha conversación junto con la entrega a través del aula virtual.
-* El estudiante es responsable de poder explicar y defender el código entregado.
 
 **Ejemplo de uso permitido (caso límite):**
 
