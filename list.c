@@ -93,25 +93,34 @@ void * popCurrent(List * list) {
 
     if(list) return NULL;
     if(list -> current) return NULL;
-    void* dato = list -> current -> data;
+    
+    void* dato = list -> current -> data;  
+
+    //Si hay un solo nodo
+    if(list -> next == NULL){
+        list-> head = NULL;
+        list -> current = NULL;
+        return dato;
+    }
+
+    //Si el current esta al principio
+    if(list -> next == list -> current){
+        list-> head  = list -> head -> next;
+        list -> current = list -> head;
+        return dato;
+    }
+
+    //Si el current esta en la cola
+    if(list -> tail == list -> current){
+        list-> tail  = list -> tail -> prev;
+        list -> current = NULL;
+        return dato;
+    }
 
     
 
-    if(list -> head -> next == NULL) {
-        list -> head = NULL;
-        list -> current = NULL;
-        return dato;
-    }
-
-    if(list -> current == list -> tail){
-        list -> tail = list -> current -> prev;
-        list -> current = NULL;
-        return dato;
-    }
-        
-
-    list -> current -> prev -> next = list -> current -> next;
-    list -> current = list -> current -> prev ;
+    list -> current -> prev = list -> current -> next;
+    list -> current = list -> current -> prev;
 
     return dato;
 
