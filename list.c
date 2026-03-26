@@ -103,7 +103,7 @@ void * popCurrent(List * list) {
         return dato;
     }
 
-    if(list -> current = list -> tail){
+    if(list -> current == list -> tail){
         list -> tail = list -> current -> prev;
         list -> current = NULL;
         return dato;
