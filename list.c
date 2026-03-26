@@ -91,21 +91,21 @@ void * popBack(List * list) {
 void * popCurrent(List * list) {
     
 
-    if(list) return NULL;
-    if(list -> current) return NULL;
+    if(list == NULL) return NULL;
+    if(list -> current == NULL) return NULL;
     
     void* dato = list -> current -> data;  
 
     //Si hay un solo nodo
     if(list -> head -> next == NULL){
-        list-> head = NULL;
+        list -> head = NULL;
         list -> current = NULL;
         return dato;
     }
 
     //Si el current esta al principio
     if(list -> head == list -> current){
-        list-> head  = list -> head -> next;
+        list -> head = list -> head -> next;
         list -> current = list -> head;
         return dato;
     }
@@ -116,8 +116,6 @@ void * popCurrent(List * list) {
         list -> current = NULL;
         return dato;
     }
-
-    
 
     list -> current -> prev = list -> current -> next;
     list -> current = list -> current -> prev;
