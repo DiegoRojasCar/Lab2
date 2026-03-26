@@ -52,3 +52,14 @@ Thu Mar 26 07:24:40 PM UTC 2026:
  tests:  0|6
 total_score: 0/60
 5daf0ae
+Thu Mar 26 07:29:27 PM UTC 2026: 
+ list.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:106:8: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  106 |     if(list -> current = list -> tail){
+      |        ^~~~
+cc1: all warnings being treated as errors
+1496dd8
