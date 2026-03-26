@@ -97,7 +97,7 @@ void * popCurrent(List * list) {
     void* dato = list -> current -> data;  
 
     //Si hay un solo nodo
-    if(list -> next == NULL){
+    if(list -> head -> next == NULL){
         list-> head = NULL;
         list -> current = NULL;
         return dato;
