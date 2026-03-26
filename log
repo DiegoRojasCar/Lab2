@@ -2,3 +2,19 @@ Thu Mar 26 06:56:10 PM UTC 2026:
  tests:  0|6
 total_score: 0/60
 270ec92
+Thu Mar 26 07:10:43 PM UTC 2026: 
+ list.c | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:96:14: error: ‘List’ {aka ‘struct List’} has no member named ‘prev’
+   96 |         list -> prev = list -> next;
+      |              ^~
+list.c:96:29: error: ‘List’ {aka ‘struct List’} has no member named ‘next’
+   96 |         list -> prev = list -> next;
+      |                             ^~
+list.c:97:32: error: ‘List’ {aka ‘struct List’} has no member named ‘prev’
+   97 |         list -> current = list -> prev;
+      |                                ^~
+55dc60b
