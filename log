@@ -161,3 +161,20 @@ Thu Mar 26 08:03:40 PM UTC 2026:
  tests:  0|6
 total_score: 0/60
 5dac17e
+Thu Mar 26 08:05:14 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:109:44: error: expected ‘;’ before ‘list’
+  109 |         list -> head = list -> head -> next
+      |                                            ^
+      |                                            ;
+  110 |         list -> head -> next = aux;
+      |         ~~~~                                
+list.c:108:15: error: unused variable ‘aux’ [-Werror=unused-variable]
+  108 |         Node* aux = list -> head -> next -> next;
+      |               ^~~
+cc1: all warnings being treated as errors
+e855944
