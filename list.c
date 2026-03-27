@@ -115,18 +115,17 @@ void * popCurrent(List * list) {
     //Si el current esta en la cola
     if(list -> tail == list -> current){
         list-> tail  = list -> tail -> prev;
-        list -> current = NULL;
+        list -> tail -> next = NULL;
+        list -> current = list -> tail;
         return dato;
     }
 
-    list -> current -> prev = list -> current -> next;
-    list -> current = list -> current -> prev;
+    Node* aux = list -> current -> prev;
+    aux -> next = list -> current -> next;
+    
+    list -> current = list -> current -> next;
 
     return dato;
-
-    
-    
-    return NULL;
 }
 
 void cleanList(List * list) {
