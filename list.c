@@ -95,11 +95,14 @@ void * popCurrent(List * list) {
     if(list -> current == NULL) return NULL;
     
     void* dato = list -> current -> data;  
+    Node* eliminar = list -> current;
 
     //Si hay un solo nodo
     if(list -> head -> next == NULL){
         list -> head = NULL;
         list -> current = NULL;
+        
+        free(eliminar);
         return dato;
     }
 
@@ -110,6 +113,8 @@ void * popCurrent(List * list) {
         list -> head = list -> current;
         list -> head -> prev = NULL;
         list -> current -> prev = NULL;
+        
+        free(eliminar);
         return dato;
     }
 
@@ -118,13 +123,16 @@ void * popCurrent(List * list) {
         list-> tail  = list -> tail -> prev;
         list -> tail -> next = NULL;
         list -> current = list -> tail;
+
+        free(eliminar);
         return dato;
     }
 
     Node* aux = list -> current -> prev;
     aux -> next = list -> current -> next;
-    
+    list -> current -> next -> prev = aux;
     list -> current = list -> current -> next;
+    free(eliminar);
 
     return dato;
 }
