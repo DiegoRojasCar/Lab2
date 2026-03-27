@@ -105,8 +105,8 @@ void * popCurrent(List * list) {
 
     //Si el current esta al principio
     if(list -> head == list -> current){
+        list -> current = liat -> head -> next
         Node* aux = list -> head -> next -> next;
-        list -> head = list -> head -> next;
         list -> head -> next = aux;
         list -> head -> prev = NULL;
         return dato;
