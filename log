@@ -209,3 +209,20 @@ list.c:110:32: error: ‘aux’ undeclared (first use in this function)
   110 |         list -> head -> next = aux;
       |                                ^~~
 07840bf
+Fri Mar 27 10:50:53 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:108:47: error: expected ‘;’ before ‘Node’
+  108 |         list -> current = list -> head -> next
+      |                                               ^
+      |                                               ;
+  109 |         Node* aux = list -> head -> next -> next;
+      |         ~~~~                                   
+list.c:110:32: error: ‘aux’ undeclared (first use in this function)
+  110 |         list -> head -> next = aux;
+      |                                ^~~
+list.c:110:32: note: each undeclared identifier is reported only once for each function it appears in
+b755ae7
