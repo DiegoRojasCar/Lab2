@@ -27,3 +27,7 @@ args = "gcc -g test.c -Wall -Werror -o a.out && ./a.out"
 
 [workflows.workflow.metadata]
 outputType = "console"
+
+[userenv]
+
+[userenv.shared]

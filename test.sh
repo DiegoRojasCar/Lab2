@@ -77,16 +77,20 @@ if ./a.out &> /dev/null ; then
 
     echo "Usuario detectado: $USERNAME"
 
-    echo "--------------------------------------------"
-    echo "Autenticación requerida (GitHub PAT)"
-    echo ""
-    echo "¿No tienes token?"
-    echo "Genera uno siguiendo esta guía:"
-    echo "https://chartreuse-goal-d5c.notion.site/Como-genero-un-token-de-acceso-github-30bd965dc59e805b97c5dfa3aa6276d1"
-    echo "--------------------------------------------"
-    echo ""
-    read -s -p "Token: " TOKEN
-    echo ""
+    if [ -z "$GITHUB_TOKEN" ]; then
+      echo "--------------------------------------------"
+      echo "Autenticación requerida (GitHub PAT)"
+      echo ""
+      echo "¿No tienes token?"
+      echo "Genera uno siguiendo esta guía:"
+      echo "https://chartreuse-goal-d5c.notion.site/Como-genero-un-token-de-acceso-github-30bd965dc59e805b97c5dfa3aa6276d1"
+      echo "--------------------------------------------"
+      echo ""
+      read -s -p "Token: " TOKEN
+      echo ""
+    else
+      TOKEN="$GITHUB_TOKEN"
+    fi
 
     if [ -z "$TOKEN" ]; then
       echo "Token vacío. Abortando."
