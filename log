@@ -329,3 +329,8 @@ list.c:97:30: error: ‘List’ {aka ‘struct List’} has no member named ‘n
    97 |     if (list == NULL || list -> next == NULL){
       |                              ^~
 47ccb71
+Sat Mar 28 04:30:06 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+f81e04f
