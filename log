@@ -319,3 +319,13 @@ Sat Mar 28 04:27:37 PM UTC 2026:
  1 file changed, 5 insertions(+)
  tests:  0|0
 a42e37e
+Sat Mar 28 04:29:44 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:97:30: error: ‘List’ {aka ‘struct List’} has no member named ‘next’
+   97 |     if (list == NULL || list -> next == NULL){
+      |                              ^~
+47ccb71
