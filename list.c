@@ -44,11 +44,22 @@ List * createList() {
 //   - La segunda función retorna el dato del nodo a continuación del current y actualiza el current para que apunte a ese nodo.
 
 void * firstList(List * list) {
-    return NULL;
+    
+    if(list == NULL)return NULL;
+
+    list -> current = list -> head;
+    void* dato = list -> current -> data;
+    return dato;
 }
 
 void * nextList(List * list) {
-    return NULL;
+    if(list == NULL)return NULL;
+    if(list -> current -> next == NULL) return NULL;
+
+    void* dato = list -> current -> next -> data;
+    list -> current = list -> current -> next;
+
+    return dato;
 }
 
 // 3. Programe las funciones void * lastList(List * list) y void * prevList(List * list).
